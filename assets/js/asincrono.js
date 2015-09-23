@@ -10,7 +10,13 @@ $(
 		$("#a-nuevo").on("click", function(){
 			$("#divPrincipal").load("nuevo.php", function (){
 				$("#btnSumar").on("click", function(){
-					var resultado = parseInt($("#num1").val()) + parseInt($("#num2").val())
+					// Antes de realizar la Suma hacemos una conversion de Tipos a Enteros
+					//var resultado = parseInt($("#num1").val()) + parseInt($("#num2").val())
+
+					// Si el usuario ingresara numeros con decimales podemos realizar la conversion 
+					// usando parseFloat
+					var resultado = parseFloat($("#num1").val()) + parseFloat($("#num2").val())
+
 					$("#h1Resultado").html(resultado)
 				});
 			});
