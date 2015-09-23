@@ -4,7 +4,7 @@
 	require("menu.php");
 ?>
 
-	<div class="container">
+	<div class="container" id="divPrincipal">
 
 		<div class="row">
 			<div class="col-md-offset-4 col-md-4">

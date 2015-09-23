@@ -15,13 +15,9 @@
 		<meta name="author" content="">
 		<link rel="icon" href="assets/ico/favicon.ico">
 
-		<title>Desarrollo Web II - PHP MySQL</title>
+		<title>Taller de Programacion Web - PHP MySQL</title>
 
-		<!-- Bootstrap core CSS -->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
-		<!-- Custom styles for this template -->
-		<link href="starter-template.css" rel="stylesheet">
 
 		<!-- Just for debugging purposes. Don't actually copy this line! -->
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -31,6 +27,12 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+
+		<style type="text/css">
+			body{
+				padding-top: 60px;
+			}
+		</style>
 	</head>
 
 	<body>
