@@ -39,7 +39,19 @@ $(
 		 *	Implementamos el evento Click de la opción de Menú Contacto
 		 **************************************************************************************************/
 		$("#a-contacto").on("click", function(){
-			$("#divPrincipal").load("contacto.php");
+			$("#divPrincipal").load("contacto.php", function(){
+				var table = $('<table></table>').addClass('table');
+				for (r = 1; r < 5; r++) {
+					var row = $('<tr></tr>');
+					for (i = 1; i < 6; i++) {
+						var data = $('<td></td>').text('dato ' + r + ',' + i);
+						table.append(row);
+		                row.append(data);
+					}
+				}
+				$('#divPrincipal').append(table);
+
+			});
 		});
 		/**************************************************************************************************
 		 *	Implementamos el evento Click de la opción de Menú Salir
