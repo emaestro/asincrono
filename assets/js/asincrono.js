@@ -49,7 +49,28 @@ $(
 						dataType: "json"
 					}
 				).done(function( msg ) {
-					var table = $('<table></table>').addClass('table');
+					var table = $('<table></table>').addClass('table table-striped table-bordered table-condensed');
+					var row = $('<tr></tr>');
+					var data = $('<th></th>').text("Paterno");
+					table.append(row);
+					row.append(data);
+
+					data = $('<th></th>').text("Materno");
+					table.append(row);
+					row.append(data);
+
+					data = $('<th></th>').text("Nombres");
+					table.append(row);
+					row.append(data);
+
+					data = $('<th></th>').text("Usuario");
+					table.append(row);
+					row.append(data);
+
+					data = $('<th></th>').text("Clave");
+					table.append(row);
+					row.append(data);
+
 					
 					$.each(msg, function(id, fila){
 						var row = $('<tr></tr>');
