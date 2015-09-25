@@ -40,7 +40,29 @@ $(
 		 **************************************************************************************************/
 		$("#a-contacto").on("click", function(){
 			$("#divPrincipal").load("contacto.php", function(){
-				var table = $('<table></table>').addClass('table');
+
+				// Usamos $.ajax, un método parecido a $("algo").load(...) que hemos usado anteriormente
+				$.ajax(
+					{
+						method: "post",
+						url: "datos.php",
+						dataType: "json"
+					}
+				).done(function( msg ) {
+					var table = $('<table></table>').addClass('table');
+					
+					$.each(msg, function(id, fila){
+						var row = $('<tr></tr>');
+						var data = $('<td></td>').text(fila.paterno);
+						table.append(row);
+						row.append(data);
+					});
+
+					$('#divPrincipal').append(table);
+				});
+				// Creamos una tabla de forma dinamica con datos generados automaticamente
+				/*var table = $('<table></table>').addClass('table');
+				
 				for (r = 1; r < 5; r++) {
 					var row = $('<tr></tr>');
 					for (i = 1; i < 6; i++) {
@@ -49,7 +71,7 @@ $(
 		                row.append(data);
 					}
 				}
-				$('#divPrincipal').append(table);
+				$('#divPrincipal').append(table);*/
 
 			});
 		});
