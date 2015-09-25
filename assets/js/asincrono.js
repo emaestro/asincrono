@@ -56,6 +56,22 @@ $(
 						var data = $('<td></td>').text(fila.paterno);
 						table.append(row);
 						row.append(data);
+
+						data = $('<td></td>').text(fila.materno);
+						table.append(row);
+						row.append(data);
+
+						data = $('<td></td>').text(fila.nombres);
+						table.append(row);
+						row.append(data);
+
+						data = $('<td></td>').text(fila.usuario);
+						table.append(row);
+						row.append(data);
+
+						data = $('<td></td>').text(fila.clave);
+						table.append(row);
+						row.append(data);
 					});
 
 					$('#divPrincipal').append(table);
