@@ -27,26 +27,7 @@ $(
 		 *	Implementamos el evento Click de la opción de Menú Listado
 		 **************************************************************************************************/
 		$("#a-listado").on("click", function(){
-			$("#divPrincipal").load("listado.php", function() {
-				/**************************************************************************************************
-				 *	Creamos la variable javascript "Operacion"
-				 **************************************************************************************************/
-				var Operacion = {
-					'nombre': 'Suma',
-					'getNombre': function () {
-						alert('Operacion Suma');
-					}
-				};
-
-				/**************************************************************************************************
-				 *	Implementamos el evento Click de btnSuma
-				 **************************************************************************************************/
-				$("#btnOperacion").on("click", function(e){
-					e.preventDefault();
-					Operacion.getNombre();
-				});
-
-			});
+			$("#divPrincipal").load("listado.php");
 		});
 		/**************************************************************************************************
 		 *	Implementamos el evento Click de la opción de Menú Listado
@@ -135,7 +116,26 @@ $(
 		 *	Implementamos el evento Click de la opción de Menú Salir
 		 **************************************************************************************************/
 		$("#a-salir").on("click", function(){
-			$("#divPrincipal").load("salir.php");
+			$("#divPrincipal").load("salir.php", function() {
+				/**************************************************************************************************
+				 *	Creamos la variable javascript "Operacion"
+				 **************************************************************************************************/
+				var Operacion = {
+					'nombre': 'Suma',
+					'getNombre': function () {
+						alert('Operacion Suma');
+					}
+				};
+
+				/**************************************************************************************************
+				 *	Implementamos el evento Click de btnSuma
+				 **************************************************************************************************/
+				$("#btnOperacion").on("click", function(e){
+					e.preventDefault();
+					Operacion.getNombre();
+				});
+
+			});
 		});
 	}
 );
